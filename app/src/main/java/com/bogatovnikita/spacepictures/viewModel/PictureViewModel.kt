@@ -22,6 +22,7 @@ class PictureViewModel(
         return liveData
     }
 
+
     fun sendRequest() {
         liveData.postValue(PictureData.Loading(null))
         pictureImplementation.getRetrofitImp().getPictureOfTheDay(BuildConfig.NASA_API_KEY).enqueue(
@@ -32,7 +33,7 @@ class PictureViewModel(
                 ) {
                     if (response.isSuccessful && response.body() != null) {
                         response.body()?.let {
-                            liveData.postValue(PictureData.Success(it))
+                            liveData.postValue(PictureData.Success(it, it.title,it.explanation))
                         }
                     } else {
                         when (response.code()) {
