@@ -14,6 +14,7 @@ import coil.load
 import com.bogatovnikita.spacepictures.R
 import com.bogatovnikita.spacepictures.databinding.FragmentMainBinding
 import com.bogatovnikita.spacepictures.view.MainActivity
+import com.bogatovnikita.spacepictures.view.main.chips.ChipsFragment
 import com.bogatovnikita.spacepictures.viewModel.PictureData
 import com.bogatovnikita.spacepictures.viewModel.PictureViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -60,10 +61,14 @@ class MainFragment : Fragment() {
                 Toast.makeText(requireContext(), "app_bar_fav", Toast.LENGTH_SHORT).show()
             }
             R.id.app_bar_settings -> {
-                Toast.makeText(requireContext(), "app_bar_settings", Toast.LENGTH_SHORT).show()
+                requireActivity().supportFragmentManager.beginTransaction().replace(
+                    R.id.main_activity_container,
+                    ChipsFragment.newInstance()
+                ).addToBackStack("")
+                    .commit()
             }
             android.R.id.home -> {
-                BottomNavigationDrawerFragment().show(requireActivity().supportFragmentManager,"")
+                BottomNavigationDrawerFragment().show(requireActivity().supportFragmentManager, "")
             }
         }
         return super.onOptionsItemSelected(item)
