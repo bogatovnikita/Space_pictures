@@ -28,7 +28,7 @@ class MainFragment : Fragment() {
         ViewModelProvider(this).get(PictureViewModel::class.java)
     }
 
-    lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,7 +63,7 @@ class MainFragment : Fragment() {
                 Toast.makeText(requireContext(), "app_bar_settings", Toast.LENGTH_SHORT).show()
             }
             android.R.id.home -> {
-                Toast.makeText(requireContext(), "home", Toast.LENGTH_SHORT).show()
+                BottomNavigationDrawerFragment().show(requireActivity().supportFragmentManager,"")
             }
         }
         return super.onOptionsItemSelected(item)
@@ -107,7 +107,7 @@ class MainFragment : Fragment() {
             }
 
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
-                Log.d("mylogs", "slideOffset $slideOffset")
+                Log.d("myLogs", "slideOffset $slideOffset")
             }
         })
     }
