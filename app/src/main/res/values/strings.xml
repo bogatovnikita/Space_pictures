@@ -8,8 +8,10 @@
     <string name="payment_required">Error 402 (Payment Required)</string>
     <string name="forbidden">Error 403 (Forbidden)</string>
     <string name="not_found">Error 404 (Not Found)</string>
-    <string name="IOE_exception">Ошибка доступа к серверу</string>
-    <string name="search_wiki">Искать в Wikipedia</string>
-    <string name="wiki_helper_text">Поищите термин в википедии</string>
+    <string name="IOE_exception">Server access error</string>
+    <string name="search_wiki">Search in Wikipedia</string>
+    <string name="wiki_helper_text">Look up the term on wikipedia</string>
     <string name="photo_of_the_day_stub">Photo of the day</string>
+    <string name="favourites">Favorites</string>
+    <string name="settings">Settings</string>
 </resources>
