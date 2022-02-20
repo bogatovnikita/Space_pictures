@@ -14,7 +14,7 @@ import coil.load
 import com.bogatovnikita.spacepictures.R
 import com.bogatovnikita.spacepictures.databinding.FragmentMainBinding
 import com.bogatovnikita.spacepictures.view.MainActivity
-import com.bogatovnikita.spacepictures.view.main.chips.ChipsFragment
+import com.bogatovnikita.spacepictures.view.main.chips.SettingsFragment
 import com.bogatovnikita.spacepictures.viewModel.PictureData
 import com.bogatovnikita.spacepictures.viewModel.PictureViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -63,7 +63,7 @@ class MainFragment : Fragment() {
             R.id.app_bar_settings -> {
                 requireActivity().supportFragmentManager.beginTransaction().replace(
                     R.id.main_activity_container,
-                    ChipsFragment.newInstance()
+                    SettingsFragment.newInstance()
                 ).addToBackStack("")
                     .commit()
             }
