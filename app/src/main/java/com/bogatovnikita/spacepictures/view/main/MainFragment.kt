@@ -95,6 +95,7 @@ class MainFragment : Fragment() {
     }
 
     private fun bottomSheet() {
+        var temp = true
         binding.inputLayout.setEndIconOnClickListener {
             startActivity(Intent(Intent.ACTION_VIEW).apply {
                 data =
@@ -103,7 +104,15 @@ class MainFragment : Fragment() {
         }
 
         bottomSheetBehavior = BottomSheetBehavior.from(binding.included.bottomSheetContainer)
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_HALF_EXPANDED
+        binding.fab.setOnClickListener {
+            if (temp) {
+                bottomSheetBehavior.state = BottomSheetBehavior.STATE_HALF_EXPANDED
+                temp = false
+            }else{
+                bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+                temp = true
+            }
+        }
         binding.included.bottomSheetDescriptionHeader.text = ""
 
         bottomSheetBehavior.addBottomSheetCallback(object :
