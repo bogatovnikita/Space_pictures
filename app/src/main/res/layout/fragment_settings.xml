@@ -111,30 +111,41 @@
 
         <TextView
             style="@style/myTextView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
             android:text="@string/choose_theme" />
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/default_rb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/default_theme"
-            android:layout_margin="@dimen/margin_small"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/first_theme_rb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/first_theme"
-            android:layout_margin="@dimen/margin_small"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/default_theme_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:text="@string/default_theme"
+                android:textSize="@dimen/text_size_RB" />
 
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/second_theme_rb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/second_theme"
-            android:layout_margin="@dimen/margin_small"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/first_theme_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:text="@string/first_theme"
+                android:textSize="@dimen/text_size_RB" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/second_theme_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:text="@string/second_theme"
+                android:textSize="@dimen/text_size_RB" />
+
+        </RadioGroup>
 
     </LinearLayout>
 

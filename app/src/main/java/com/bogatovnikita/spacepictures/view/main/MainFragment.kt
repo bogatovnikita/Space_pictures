@@ -14,7 +14,7 @@ import coil.load
 import com.bogatovnikita.spacepictures.R
 import com.bogatovnikita.spacepictures.databinding.FragmentMainBinding
 import com.bogatovnikita.spacepictures.view.MainActivity
-import com.bogatovnikita.spacepictures.view.main.chips.SettingsFragment
+import com.bogatovnikita.spacepictures.view.main.settings.SettingsFragment
 import com.bogatovnikita.spacepictures.viewModel.PictureData
 import com.bogatovnikita.spacepictures.viewModel.PictureViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior

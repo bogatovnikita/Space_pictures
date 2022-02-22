@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="myBottomAppBar" parent="Widget.MaterialComponents.BottomAppBar">
+    <style name="myBottomAppBarBlack" parent="Widget.MaterialComponents.BottomAppBar">
         <item name="backgroundTint">@color/black</item>
     </style>
 
-    <style name="myRadioBottom" parent="Widget.MaterialComponents.CompoundButton.RadioButton"></style>
+    <style name="myBottomAppBarRed" parent="Widget.MaterialComponents.BottomAppBar">
+        <item name="backgroundTint">@color/red</item>
+    </style>
+
+    <style name="myBottomAppBarGreen" parent="Widget.MaterialComponents.BottomAppBar">
+        <item name="backgroundTint">@color/green</item>
+    </style>
 
     <style name="myTextView">
         <item name="android:gravity">center</item>
