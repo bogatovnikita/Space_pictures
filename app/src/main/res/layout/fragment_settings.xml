@@ -42,66 +42,100 @@
     </LinearLayout>
 
     <HorizontalScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:singleLine="true"
-        app:singleSelection="true">
+        android:orientation="vertical">
 
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
+        <TextView
+            style="@style/myTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/choose_theme" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/default_rb"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/default_text" />
+            android:text="@string/default_theme"
+            android:layout_margin="@dimen/margin_small"/>
 
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/first_theme_rb"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/default_text" />
+            android:text="@string/first_theme"
+            android:layout_margin="@dimen/margin_small"/>
 
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/second_theme_rb"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/default_text" />
+            android:text="@string/second_theme"
+            android:layout_margin="@dimen/margin_small"/>
 
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/default_text" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/default_text" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/default_text" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/default_text" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/default_text" />
-    </com.google.android.material.chip.ChipGroup>
-
-</HorizontalScrollView>
+    </LinearLayout>
 
 </LinearLayout>
