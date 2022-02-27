@@ -16,7 +16,7 @@ import com.bogatovnikita.spacepictures.databinding.FragmentMainBinding
 import com.bogatovnikita.spacepictures.view.MainActivity
 import com.bogatovnikita.spacepictures.view.settings.SettingsFragment
 import com.bogatovnikita.spacepictures.viewModel.PictureData
-import com.bogatovnikita.spacepictures.viewModel.PictureViewModel
+import com.bogatovnikita.spacepictures.viewModel.PODViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class MainFragment : Fragment() {
@@ -25,8 +25,8 @@ class MainFragment : Fragment() {
     private val binding: FragmentMainBinding
         get() = _binding!!
 
-    private val viewModel: PictureViewModel by lazy {
-        ViewModelProvider(this).get(PictureViewModel::class.java)
+    private val viewModel: PODViewModel by lazy {
+        ViewModelProvider(this).get(PODViewModel::class.java)
     }
 
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>

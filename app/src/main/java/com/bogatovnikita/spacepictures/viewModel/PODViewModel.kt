@@ -14,7 +14,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
 
-class PictureViewModel(
+class PODViewModel(
     private val liveData: MutableLiveData<PictureData> = MutableLiveData(),
     private val pictureImplementation: PictureImplementation = PictureImplementation()
 ) : ViewModel() {
