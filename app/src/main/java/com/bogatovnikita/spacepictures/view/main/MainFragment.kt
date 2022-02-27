@@ -86,6 +86,7 @@ class MainFragment : Fragment() {
                         binding.imageView.setImageResource(R.drawable.ic_no_photo_vector)
 
                     } else {
+
                         binding.imageView.load(serverResponse.url) {
                             placeholder(R.drawable.ic_no_photo_vector)
                         }

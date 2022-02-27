@@ -33,7 +33,7 @@ class PODViewModel(
                 ) {
                     if (response.isSuccessful && response.body() != null) {
                         response.body()?.let {
-                            liveData.postValue(PictureData.Success(it, it.title,it.explanation))
+                            liveData.postValue(PictureData.Success(it, it.title,it.explanation,it.date))
                         }
                     } else {
                         when (response.code()) {

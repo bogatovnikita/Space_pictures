@@ -36,28 +36,28 @@ class EarthFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getData().observe(viewLifecycleOwner, Observer {
-            renderData(it)
+            //renderData(it)
         })
         viewModel.sendRequest()
     }
 
-    private fun renderData(pictureData: PictureData) {
-        when (pictureData) {
-            is PictureData.Error -> {}
-            is PictureData.Loading -> {}
-            is PictureData.Success -> {
-                with(pictureData) {
-                    if ((serverResponse.url).isEmpty()) {
-                        Toast.makeText(requireActivity(), R.string.no_photo, Toast.LENGTH_LONG)
-                            .show()
-                        binding.imageView.setImageResource(R.drawable.ic_no_photo_vector)
-                    } else {
-                        binding.imageView.load(serverResponse.url) {
-                            placeholder(R.drawable.ic_no_photo_vector)
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    private fun renderData(pictureData: PictureData) {
+//        when (pictureData) {
+//            is PictureData.Error -> {}
+//            is PictureData.Loading -> {}
+//            is PictureData.SuccessEarthEpic -> {
+//                with(pictureData) {
+//                    if ((serverResponse.image).isEmpty()) {
+//                        Toast.makeText(requireActivity(), R.string.no_photo, Toast.LENGTH_LONG)
+//                            .show()
+//                        binding.imageView.setImageResource(R.drawable.ic_no_photo_vector)
+//                    } else {
+//                        binding.imageView.load(serverResponse.image) {
+//                            placeholder(R.drawable.ic_no_photo_vector)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
 }

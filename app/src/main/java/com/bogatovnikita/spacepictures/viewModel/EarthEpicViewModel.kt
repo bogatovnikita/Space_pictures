@@ -35,7 +35,10 @@ class EarthEpicViewModel(
                         }
                     }
 
-                    override fun onFailure(call: Call<EarthEpicServerResponse>, t: Throwable) {
+                    override fun onFailure(
+                        call: Call<EarthEpicServerResponse>,
+                        t: Throwable
+                    ) {
                         throw IOException(R.string.IOE_exception.toString())
                     }
                 }

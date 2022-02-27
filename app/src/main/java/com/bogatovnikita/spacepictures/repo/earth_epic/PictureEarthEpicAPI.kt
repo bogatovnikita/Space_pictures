@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface PictureEarthEpicAPI {
-    @GET("EPIC/api/natural")
+    @GET("/planetary/earth/assets")
     fun getPicturesEarthEpic(@Query("api_key") apiKey: String): Call<EarthEpicServerResponse>
 }

@@ -18,7 +18,7 @@ class OtherPhotoFragment : Fragment() {
     ): View {
         val result: View = inflater.inflate(R.layout.fragment_other_photo, container, false)
         val viewPager: ViewPager = result.findViewById(R.id.pager)
-        viewPager.adapter = ViewPagerAdapter(requireActivity().supportFragmentManager)
+        viewPager.adapter = ViewPagerAdapter(childFragmentManager)
         return result
     }
 
