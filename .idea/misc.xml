@@ -19,8 +19,14 @@
         <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/bottom_navigation_layout.xml" value="0.1" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.25" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_chips.xml" value="0.1" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_earth.xml" value="0.1" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_main.xml" value="0.22" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_mars.xml" value="0.1" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_other_photo_fragment.xml" value="0.1" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_view_pager_adapter.xml" value="0.1" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/fragment_weather.xml" value="0.1" />
+        <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/layout/item_page_other_photo.xml" value="0.1" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/menu/menu_bottom_bar.xml" value="0.18" />
         <entry key="..\:/Users/bogat/AndroidStudioProjects/Spacepictures/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1" />
       </map>

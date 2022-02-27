@@ -1,4 +1,4 @@
-package com.bogatovnikita.spacepictures.repo
+package com.bogatovnikita.spacepictures.repo.pictute_of_the_day
 
 import com.bogatovnikita.spacepictures.view.MyApp.Companion.retrofit
 import com.google.gson.GsonBuilder

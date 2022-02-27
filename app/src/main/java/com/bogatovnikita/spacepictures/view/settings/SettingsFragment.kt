@@ -1,4 +1,4 @@
-package com.bogatovnikita.spacepictures.view.main.settings
+package com.bogatovnikita.spacepictures.view.settings
 
 import android.content.Context
 import android.os.Bundle

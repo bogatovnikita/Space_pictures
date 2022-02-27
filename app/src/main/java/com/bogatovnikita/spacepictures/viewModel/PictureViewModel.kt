@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.bogatovnikita.spacepictures.BuildConfig
 import com.bogatovnikita.spacepictures.R
-import com.bogatovnikita.spacepictures.repo.PDOServerResponse
-import com.bogatovnikita.spacepictures.repo.PictureImplementation
+import com.bogatovnikita.spacepictures.repo.pictute_of_the_day.PODServerResponse
+import com.bogatovnikita.spacepictures.repo.pictute_of_the_day.PictureImplementation
 import com.bogatovnikita.spacepictures.utils.LOG_E
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,10 +26,10 @@ class PictureViewModel(
     fun sendRequest() {
         liveData.postValue(PictureData.Loading(null))
         pictureImplementation.getRetrofitImp().getPictureOfTheDay(BuildConfig.NASA_API_KEY).enqueue(
-            object : Callback<PDOServerResponse> {
+            object : Callback<PODServerResponse> {
                 override fun onResponse(
-                    call: Call<PDOServerResponse>,
-                    response: Response<PDOServerResponse>
+                    call: Call<PODServerResponse>,
+                    response: Response<PODServerResponse>
                 ) {
                     if (response.isSuccessful && response.body() != null) {
                         response.body()?.let {
@@ -46,7 +46,7 @@ class PictureViewModel(
                     }
                 }
 
-                override fun onFailure(call: Call<PDOServerResponse>, t: Throwable) {
+                override fun onFailure(call: Call<PODServerResponse>, t: Throwable) {
                     throw IOException(R.string.IOE_exception.toString())
                 }
             }

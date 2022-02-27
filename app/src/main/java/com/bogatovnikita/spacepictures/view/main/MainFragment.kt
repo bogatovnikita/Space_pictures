@@ -14,7 +14,7 @@ import coil.load
 import com.bogatovnikita.spacepictures.R
 import com.bogatovnikita.spacepictures.databinding.FragmentMainBinding
 import com.bogatovnikita.spacepictures.view.MainActivity
-import com.bogatovnikita.spacepictures.view.main.settings.SettingsFragment
+import com.bogatovnikita.spacepictures.view.settings.SettingsFragment
 import com.bogatovnikita.spacepictures.viewModel.PictureData
 import com.bogatovnikita.spacepictures.viewModel.PictureViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -80,8 +80,15 @@ class MainFragment : Fragment() {
             is PictureData.Loading -> {}
             is PictureData.Success -> {
                 with(pictureData) {
-                    binding.imageView.load(serverResponse.url) {
-                        placeholder(R.drawable.ic_no_photo_vector)
+                    if ((serverResponse.url).isEmpty()) {
+                        Toast.makeText(requireActivity(), R.string.no_photo, Toast.LENGTH_LONG)
+                            .show()
+                        binding.imageView.setImageResource(R.drawable.ic_no_photo_vector)
+
+                    } else {
+                        binding.imageView.load(serverResponse.url) {
+                            placeholder(R.drawable.ic_no_photo_vector)
+                        }
                     }
                     binding.included.bottomSheetDescriptionHeader.text = title
                     binding.included.bottomSheetDescription.text = explanation
@@ -108,7 +115,7 @@ class MainFragment : Fragment() {
             if (temp) {
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_HALF_EXPANDED
                 temp = false
-            }else{
+            } else {
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
                 temp = true
             }

@@ -2,12 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="none">
         <item
-            android:id="@+id/navigation_one"
+            android:id="@+id/navigation_other_photo"
             android:icon="@drawable/ic_archive"
-            android:title="@string/first_screen" />
-        <item
-            android:id="@+id/navigation_two"
-            android:icon="@drawable/ic_send"
-            android:title="@string/second_screen" />
+            android:title="@string/other_photo" />
     </group>
 </menu>
